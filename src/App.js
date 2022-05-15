@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { Typography, Divider } from 'antd'
+import Filter from './components/Filters/Filter'
+import TodoList from './components/TodoList/TodoList'
 
-function App() {
+
+
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div 
+    style={{
+      width: 500,
+      margin: '26px auto',
+      display: 'flex',
+      flexDirection: 'column',
+      padding: 20,
+      boxShadow: '0 0 10px 4px #bfbfbf',
+      borderRadius: 5,
+      height: '80vh'
+    }}
+    >
+      <Typography.Title style={{ textAlign: 'center' }}>To Do List</Typography.Title>
+      <Filter></Filter>
+      <Divider></Divider>
+      <TodoList></TodoList>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
